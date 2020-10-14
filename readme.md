@@ -1,4 +1,4 @@
-## Forked version contents last compiled version that supports Unicode. Be note: the text below of readme.md is unchanged.
+## Forked version contents last compiled x64 version that supports Unicode. Be note: the text below of readme.md is unchanged.
 
 # Toast
 
@@ -10,10 +10,9 @@ As seen in [jacobmarshall/pokevision-cli](https://github.com/jacobmarshall/pokev
 
 As well as using go-toast within your Go projects, you can also utilise the CLI - for any of your projects.
 
-Download [64bit](https://go-toast-downloads.s3.amazonaws.com/v1/toast64.exe) or [32bit](https://go-toast-downloads.s3.amazonaws.com/v1/toast32.exe)
 
 ```cmd
-C:\Users\Example\Downloads\toast64.exe \
+C:\Users\Example\Downloads\toaster.exe \
   --app-id "Example App" \
   --title "Hello World" \
   --message "Lorem ipsum dolor sit amet, consectetur adipiscing elit." \
@@ -25,39 +24,7 @@ C:\Users\Example\Downloads\toast64.exe \
   --action "Open browser" --action-arg "http://..."
 ```
 
-![CLI](./screenshot-cli.png)
+## [Example](https://github.com/go-toast/toast/blob/master/readme.md#example)
 
-## Example
+## [Screenshots](https://github.com/go-toast/toast/blob/master/readme.md#screenshots)
 
-```go
-package main
-
-import (
-    "log"
-
-    "gopkg.in/toast.v1"
-)
-
-func main() {
-    notification := toast.Notification{
-        AppID: "Example App",
-        Title: "My notification",
-        Message: "Some message about how important something is...",
-        Icon: "go.png", // This file must exist (remove this line if it doesn't)
-        Actions: []toast.Action{
-            {"protocol", "I'm a button", ""},
-            {"protocol", "Me too!", ""},
-        },
-    }
-    err := notification.Push()
-    if err != nil {
-        log.Fatalln(err)
-    }
-}
-```
-
-## Screenshots
-
-![Toast](./screenshot-toast.png)
-
-![Action centre](./screenshot-action-centre.png)

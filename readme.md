@@ -1,3 +1,5 @@
+## Forked version contents last compiled version that supports Unicode. Be note: the text below of readme.md is unchanged.
+
 # Toast
 
 A go package for Windows 10 toast notifications.
